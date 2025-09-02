@@ -20,7 +20,7 @@ var app = builder.Build();
 app.MapControllers();
 
 // Configurar puerto dinámico para Railway
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
 app.Urls.Add($"http://*:{port}");
 
 app.Run();
