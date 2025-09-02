@@ -1,0 +1,25 @@
+# Etapa 1: Build
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+
+# Configurar directorio de trabajo
+WORKDIR /app
+
+# Copiar archivos csproj y restaurar dependencias
+COPY *.sln .
+COPY Tienda/*.csproj ./Tienda/
+RUN dotnet restore
+
+# Copiar todo el código
+COPY Tienda/. ./Tienda/
+
+# Build del proyecto en Release
+RUN dotnet publish Tienda/Tienda.csproj -c Release -o out
+
+# Etapa 2: Runtime
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
+
+WORKDIR /app
+COPY --from=build /app/out ./
+
+# Configurar puerto dinámico de Railway
+ENV DOTNE

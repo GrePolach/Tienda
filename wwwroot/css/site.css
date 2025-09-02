@@ -1,0 +1,80 @@
+/* site.css */
+
+/* Fuente de toda la página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: antiquewhite;/* color de fondo claro */
+    color: #333; /* color de texto */
+    margin: 0;
+    padding: 0;
+}
+
+/* Títulos */
+h1 {
+    font-family: Constantia;
+    font-style: oblique;
+    font-weight: 700;
+    color: darkgoldenrod;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ff6f61; /* color de fondo de la barra */
+}
+
+    .navbar a {
+        color: white !important; /* enlaces blancos */
+        font-weight: bold;
+    }
+
+/* Tabla de productos */
+table {
+    
+    background-color: indianred; 
+    border-collapse: collapse;
+    width: 100%;
+}
+/* Miniaturas clickeables */
+.product-thumbnail {
+    width: 100px; /* tamaño en la tabla */
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer; /* indica clic */
+    transition: transform 0.2s ease;
+}
+
+    .product-thumbnail:hover {
+        transform: scale(1.05);
+    }
+
+
+th {
+    background-color: tan;
+    color: black;
+    padding:10px;
+    
+}
+
+td {
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color:lightpink;
+}
+
+/* Botones */
+.btn {
+    background-color: lightcoral;
+    color: black;
+    border: 30px;
+}
+
+    .btn:hover {
+        background-color: #e0554c;
+    }
+
+/* Imágenes */
+img {
+    border-radius: 10px;
+}
