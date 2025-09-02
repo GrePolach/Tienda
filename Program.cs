@@ -3,39 +3,32 @@ using Tienda.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurar la cadena de conexión a Railway
+// Configurar cadena de conexión (MySQL) desde appsettings.json o variable de entorno
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
+                       ?? Environment.GetEnvironmentVariable("DATABASE_URL"); 
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseMySql(
-        builder.Configuration.GetConnectionString("DefaultConnection"),
-        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
-    )
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
 );
 
-// Agregar servicios MVC (controladores con vistas)
+// Agregar servicios de MVC (controladores y vistas)
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Configurar puerto dinámico para Railway
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-app.Urls.Add($"http://*:{port}");
+// Middleware
+app.UseStaticFiles();      // Para servir wwwroot (CSS, JS, imágenes)
+app.UseRouting();          // Configurar rutas
+app.UseAuthorization();    // Si usas autenticación
 
-// Habilitar archivos estáticos (wwwroot)
-app.UseStaticFiles();
-
-// Habilitar rutas MVC
-app.UseRouting();
-
-app.UseAuthorization();
-
-// Ruta por defecto
+// Configurar rutas MVC
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}"
 );
 
-// Opción adicional: respuesta simple en "/"
-app.MapGet("/", () => "La tienda está en línea!");
+// Configurar puerto dinámico para Railway
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Urls.Add($"http://*:{port}");
 
-// Ejecutar aplicación
 app.Run();
