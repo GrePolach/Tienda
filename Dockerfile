@@ -5,25 +5,21 @@ WORKDIR /app
 
 
 COPY *.sln .
-COPY *.csproj .
+COPY *.csproj ./
 RUN dotnet restore
 
 
 COPY . .
-
-
 RUN dotnet publish Tienda.csproj -c Release -o out
 
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
-
 WORKDIR /app
+
+
 COPY --from=build /app/out .
+
 
 ENV DOTNET_RUNNING_IN_CONTAINER=true
 ENV DOTNET_USE_POLLING_FILE_WATCHER=true
-ENV DOTNET_HOST_PATH=/usr/share/dotnet/dotnet
-
-
 CMD ["dotnet", "Tienda.dll"]
-
