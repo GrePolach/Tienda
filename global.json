@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 {
   "sdk": {
     "version": "6.0.428"
   }
 }
+=======
+﻿{ "sdk": { "version": "6.0.413" } }
+>>>>>>> 4d1858d (Arreglos de SDK, global.json y migraciones)

@@ -12,8 +12,7 @@ C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\MessagePack.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\MessagePack.Annotations.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.Build.dll
-C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.Build.Framework.dll
+C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.Build.Locator.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -36,7 +35,6 @@ C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.EntityFrame
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.NET.StringTools.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.VisualStudio.Debugger.Contracts.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -66,7 +64,6 @@ C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\System.Composition.Ty
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\System.Drawing.Common.dll
-C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\System.Security.Permissions.dll
 C:\Users\Greta\source\repos\Tienda\Tienda\bin\Debug\net6.0\System.Windows.Extensions.dll
